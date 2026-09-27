@@ -1,16 +1,67 @@
-# React + Vite
+# Assignment & Review Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React-based Assignment & Review Dashboard built as a Frontend Intern technical assignment.
 
-Currently, two official plugins are available:
+The application provides separate dashboards for Students and Admins/Professors. Students can view assignments and confirm submissions, while Admins can create, edit, delete, and monitor assignments and student submission progress.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+### Student Dashboard
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- View assigned assignments
+- View assignment description and due date
+- Track submission progress
+- Confirm assignment submission
+- Double-verification before submitting
+- Submission status updates automatically
+- Responsive student dashboard
 
-## Expanding the ESLint configuration
+### Admin Dashboard
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Create new assignments
+- Edit existing assignments
+- Delete assignments
+- Add assignment description and due date
+- Attach Google Drive assignment links
+- View total assignments
+- View total students
+- View total submissions
+- Monitor individual student submission status
+- View individual student progress
+- Responsive admin dashboard
+
+## Tech Stack
+
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- Tailwind CSS
+- React Router
+- Vite
+- LocalStorage
+
+## Project Structure
+
+```text
+src/
+├── app/
+│   ├── App.jsx
+│   └── App.css
+│
+├── components/
+│   ├── AssignmentCard.jsx
+│   ├── Navbar.jsx
+│   └── SubmissionModal.jsx
+│
+├── Pages/
+│   ├── AdminDashboard.jsx
+│   └── studentDashboard.jsx
+│
+├── data/
+│   └── assignments.js
+│
+├── assets/
+│
+├── index.css
+└── main.jsx
