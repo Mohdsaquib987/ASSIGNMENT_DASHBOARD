@@ -1,67 +1,78 @@
-# Assignment & Review Dashboard
+# 📚 Assignment Dashboard
 
-A responsive React-based Assignment & Review Dashboard built as a Frontend Intern technical assignment.
+A modern, role-based assignment management system built with **React + Vite + Tailwind CSS**. Students can track and submit assignments, while professors can create, manage, and monitor submissions across multiple courses.
 
-The application provides separate dashboards for Students and Admins/Professors. Students can view assignments and confirm submissions, while Admins can create, edit, delete, and monitor assignments and student submission progress.
+---
 
-## Features
+## 🎯 Overview
 
-### Student Dashboard
+The Assignment Dashboard provides two distinct role-based experiences:
 
-- View assigned assignments
-- View assignment description and due date
-- Track submission progress
-- Confirm assignment submission
-- Double-verification before submitting
-- Submission status updates automatically
-- Responsive student dashboard
+- **👨‍🎓 Student Portal** — View enrolled courses, track assignments, submit work, and monitor progress
+- **👨‍🏫 Professor Portal** — Manage courses, create/edit assignments, and track student submissions with analytics
 
-### Admin Dashboard
+All data persists in `localStorage` (mock backend) to demonstrate a complete frontend flow without server dependency.
 
-- Create new assignments
-- Edit existing assignments
-- Delete assignments
-- Add assignment description and due date
-- Attach Google Drive assignment links
-- View total assignments
-- View total students
-- View total submissions
-- Monitor individual student submission status
-- View individual student progress
-- Responsive admin dashboard
+---
 
-## Tech Stack
+## ✨ Features
 
-- React.js
-- JavaScript
-- HTML5
-- CSS3
-- Tailwind CSS
-- React Router
-- Vite
-- LocalStorage
+### Student Flow
+- 🔐 Role-based login with validation
+- 📖 Enrolled courses dashboard
+- 📝 Course-wise assignment listing
+- ⏰ Due date tracking with "days left" and "overdue" indicators
+- ✅ Submission acknowledgment with timestamp
+- 📊 Progress visualization (bars + badges + stats)
+- 🚫 Auto-disabled submit button after deadline
 
-## Project Structure
+### Professor Flow
+- 🔐 Role-based login with redirect
+- 🎓 Courses grid with per-course stats
+- ➕ Create assignments (title, description, deadline, OneDrive link, submission type)
+- ✏️ Edit and delete assignments
+- 📈 Real-time submission analytics per student
+- 🗂️ Course-wise assignment filtering
+- 🛡️ Past-date validation on deadline field
 
-```text
-src/
-├── app/
-│   ├── App.jsx
-│   └── App.css
-│
-├── components/
-│   ├── AssignmentCard.jsx
-│   ├── Navbar.jsx
-│   └── SubmissionModal.jsx
-│
-├── Pages/
-│   ├── AdminDashboard.jsx
-│   └── studentDashboard.jsx
-│
-├── data/
-│   └── assignments.js
-│
-├── assets/
-│
-├── index.css
-└── main.jsx
+### Common
+- 🎨 Clean, modern UI with Tailwind CSS v4
+- 🧭 Protected routes with role validation
+- 💾 Persistent state via `localStorage`
+- 📱 Fully responsive (mobile + tablet + desktop)
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Tech |
+|---|---|
+| **Framework** | React 18 |
+| **Build Tool** | Vite |
+| **Styling** | Tailwind CSS v4 |
+| **Routing** | React Router DOM v6 |
+| **State** | React Hooks (`useState`, `useEffect`, `useMemo`) |
+| **Storage** | Browser `localStorage` (mock API) |
+
+---
+
+## 🚀 Setup Instructions
+
+### Prerequisites
+- Node.js `v18+`
+- npm or yarn
+
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Mohdsaquib987/ASSIGNMENT_DASHBOARD.git
+
+# 2. Navigate into the project
+cd ASSIGNMENT_DASHBOARD
+
+# 3. Install dependencies
+npm install
+
+# 4. Start development server
+npm run dev
